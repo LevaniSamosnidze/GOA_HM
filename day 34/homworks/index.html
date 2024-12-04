@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="ka">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Instagram Registration</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #fafafa;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        .container {
+            background-color: #fff;
+            border: 1px solid #dbdbdb;
+            padding: 20px;
+            width: 300px;
+            text-align: center;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+        .container h1 {
+            font-size: 24px;
+            margin-bottom: 20px;
+        }
+        .container input {
+            width: 100%;
+            padding: 10px;
+            margin: 8px 0;
+            border: 1px solid #dbdbdb;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+        .container button {
+            width: 100%;
+            padding: 10px;
+            background-color: #3897f0;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            font-size: 14px;
+            cursor: pointer;
+        }
+        .container button:hover {
+            background-color: #3071a9;
+        }
+        .container p {
+            margin-top: 20px;
+            font-size: 14px;
+            color: #8e8e8e;
+        }
+        .container a {
+            color: #3897f0;
+            text-decoration: none;
+        }
+        .container a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Instagram</h1>
+        <input type="text" placeholder="ტელეფონი, ელ.ფოსტა ან მომხმარებლის სახელი" required>
+        <input type="text" placeholder="სახელი და გვარი" required>
+        <input type="password" placeholder="პაროლი" required>
+        <button type="submit">რეგისტრაცია</button>
+        <p>უკვე გაქვთ ანგარიში? <a href="#">შესვლა</a></p>
+    </div>
+</body>
+</html>

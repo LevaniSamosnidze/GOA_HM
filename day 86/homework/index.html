@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="ka">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book Constructor</title>
+</head>
+<body>
+    <script>
+        function Book(title, author, year, genre) {
+            this.title = title;
+            this.author = author;
+            this.year = year;
+            this.genre = genre;
+            this.getSummary = function() {
+                return `${this.title} by ${this.author}, published in ${this.year}, is a ${this.genre} book.`;
+            };
+        }
+
+        const myBook = new Book("1984", "George Orwell", 1949, "Dystopian");
+        console.log(myBook);
+        console.log(myBook.getSummary());
+    </script>
+</body>
+</html>

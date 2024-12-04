@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JSX Examples</title>
+    <!-- React, ReactDOM და Babel -->
+    <script src="https://unpkg.com/react@17/umd/react.development.js" crossorigin></script>
+    <script src="https://unpkg.com/react-dom@17/umd/react-dom.development.js" crossorigin></script>
+    <script src="https://unpkg.com/babel-standalone@6/babel.min.js" crossorigin></script>
+</head>
+<body>
+    <!-- Root ელემენტები -->
+    <div id="list"></div>
+    <div id="conditional"></div>
+    <div id="dynamic-img"></div>
+    <div id="styled-div"></div>
+    <div id="function-jsx"></div>
+    <div id="template-string"></div>
+    <div id="dynamic-tag"></div>
+    <div id="nested-map"></div>
+    <div id="table"></div>
+    <div id="string-interpolation"></div>
+
+    <script type="text/babel">
+        // 1) Rendering a List
+        const fruits = ["Apple", "Banana", "Cherry"];
+        const list = (
+            <ul>
+                {fruits.map((fruit, index) => (
+                    <li key={index}>{fruit}</li>
+                ))}
+            </ul>
+        );
+        ReactDOM.render(list, document.getElementById("list"));
+
+        // 2) Conditional Rendering
+        const isLoggedIn = true;
+        const message = isLoggedIn ? <h1>Welcome</h1> : <h1>Please log in</h1>;
+        ReactDOM.render(message, document.getElementById("conditional"));
+
+        // 3) Dynamic Attributes
+        const imgProps = { src: "https://via.placeholder.com/150", alt: "Placeholder Image" };
+        const image = <img {...imgProps} />;
+        ReactDOM.render(image, document.getElementById("dynamic-img"));
+
+        // 4) Inline Styles
+        const isDarkMode = true;
+        const style = {
+            backgroundColor: isDarkMode ? "black" : "white",
+            color: isDarkMode ? "white" : "black",
+            padding: "20px",
+            textAlign: "center"
+        };
+        const styledDiv = <div style={style}>This is a styled div</div>;
+        ReactDOM.render(styledDiv, document.getElementById("styled-div"));
+
+        // 5) Rendering JSX from a Function
+        const getJSX = () => <h2>This is JSX from a function</h2>;
+        ReactDOM.render(getJSX(), document.getElementById("function-jsx"));
+
+        // 6) Template Strings in JSX
+        const name = "John";
+        const age = 30;
+        const templateString = <p>{`${name} is ${age} years old.`}</p>;
+        ReactDOM.render(templateString, document.getElementById("template-string"));
+
+        // 7) Dynamic HTML Tag Rendering
+        const tag = "h1";
+        const dynamicTag = React.createElement(tag, null, "This is dynamic!");
+        ReactDOM.render(dynamicTag, document.getElementById("dynamic-tag"));
+
+        // 8) Nested Map Rendering
+        const categories = [
+            { name: "Fruits", items: ["Apple", "Banana", "Cherry"] },
+            { name: "Vegetables", items: ["Carrot", "Broccoli", "Spinach"] }
+        ];
+        const nestedList = (
+            <div>
+                {categories.map((category, index) => (
+                    <div key={index}>
+                        <h3>{category.name}</h3>
+                        <ul>
+                            {category.items.map((item, idx) => (
+                                <li key={idx}>{item}</li>
+                            ))}
+                        </ul>
+                    </div>
+                ))}
+            </div>
+        );
+        ReactDOM.render(nestedList, document.getElementById("nested-map"));
+
+        // 9) Rendering a Table
+        const users = [
+            { name: "Alice", age: 25 },
+            { name: "Bob", age: 30 },
+            { name: "Charlie", age: 35 }
+        ];
+        const table = (
+            <table border="1">
+                <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>Age</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {users.map((user, index) => (
+                        <tr key={index}>
+                            <td>{user.name}</td>
+                            <td>{user.age}</td>
+                        </tr>
+                    ))}
+                </tbody>
+            </table>
+        );
+        ReactDOM.render(table, document.getElementById("table"));
+
+        // 10) String Interpolation
+        const greeting = "Hello";
+        const person = "Alice";
+        const greetingMessage = <h2>{`${greeting}, ${person}!`}</h2>;
+        ReactDOM.render(greetingMessage, document.getElementById("string-interpolation"));
+    </script>
+</body>
+</html>

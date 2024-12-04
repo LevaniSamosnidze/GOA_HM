@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+
+    <script>
+        const numbers = [2, 3, 5, 7, 10, 12, 17, 19, 20];
+        const primeNumbers = numbers.filter(num => {
+        for (let i = 2, s = Math.sqrt(num); i <= s; i++) {
+            if (num % i === 0) return false;
+        }
+        return num > 1;
+        });
+
+        const users = [
+        { id: 1, name: 'Alice' },
+        { id: 2, name: 'Bob' },
+        { id: 3, name: 'Charlie' }
+        ];
+        const userNames = users.map(user => user.name);
+
+        const products = [
+        { name: 'Laptop', price: 1200 },
+        { name: 'Phone', price: 600 },
+        { name: 'Tablet', price: 300 }
+        ];
+        const cheapProducts = products.filter(product => product.price < 500);
+
+        const books = [
+        { title: '1984', author: 'George Orwell' },
+        { title: 'Brave New World', author: 'Aldous Huxley' }
+        ];
+        const bookDescriptions = books.map(book => `${book.title} by ${book.author}`);
+
+        const numbers2 = [5, 9, 12, 15, 30, 45, 50];
+        const filteredNumbers = numbers2.filter(num => num > 10 && num % 3 === 0);
+
+        const users2 = [
+        { name: 'John', age: 17 },
+        { name: 'Jane', age: 25 },
+        { name: 'Paul', age: 30 }
+        ];
+        const adultUsers = users2.map(user => ({
+        ...user,
+        isAdult: user.age >= 18
+        }));
+
+        const numbers3 = [20, 30, 60, 80, 100];
+        const halvedNumbers = numbers3.filter(num => num > 50).map(num => num / 2);
+
+        const words = ['apple', 'banana', 'apple', 'orange', 'banana'];
+        const wordFrequencies = {};
+        words.forEach(word => {
+        wordFrequencies[word] = (wordFrequencies[word] || 0) + 1;
+        });
+
+        const cars = [
+        { brand: { name: 'Toyota' }, model: 'Camry' },
+        { brand: { name: 'Honda' }, model: 'Civic' },
+        { brand: { name: 'Toyota' }, model: 'Corolla' }
+        ];
+        const toyotaCars = cars.filter(car => car.brand.name === 'Toyota');
+
+    </script>
+    
+    
+</body>
+</html>

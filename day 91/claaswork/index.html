@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div {
+            border: 1px solid black;
+            width: 200px;
+            height: 200px;
+            background-color: red;
+            position: relative;
+        }
+    </style>
+</head>
+<body>
+    
+    <div id="div"></div>
+
+    <script>
+        let pos_left = 0;
+        let direction = 1; 
+        const div = document.getElementById('div');
+
+        function moveDiv() {
+            if (pos_left <= 0) {
+                direction = 1; 
+            } else if (pos_left >= 20) {
+                direction = -1; 
+            }
+            
+            pos_left += direction;
+            div.style.left = pos_left + 'px';
+        }
+
+        setInterval(moveDiv, 100);
+    </script>
+</body>
+</html>

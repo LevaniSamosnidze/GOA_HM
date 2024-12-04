@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form>
+        <label for="message">Message:</label>
+        <textarea id="message" name="message" maxlength="200"></textarea>
+        <span id="charCount">0/200 characters</span>
+      </form>
+      
+      <script>
+        const messageInput = document.querySelector("#message");
+        const charCount = document.querySelector("#charCount");
+      
+        messageInput.addEventListener("input", () => {
+          const currentLength = messageInput.value.length;
+          charCount.textContent = `${currentLength}/200 characters`;
+        });
+      </script>
+      
+</body>
+</html>

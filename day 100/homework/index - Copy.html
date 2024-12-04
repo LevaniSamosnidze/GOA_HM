@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <main>
+        <section>
+            <form id="my_from">
+                <input type="text" placeholder="enter your name" name="name" required>
+                <input type="email" placeholder="enter your gmail" name="email" required>
+                <input type="password" placeholder="enter your password" name="pas" required>
+                <button name="btn">submit</button>
+            </form>
+        </section>
+    </main>
+
+    <script>
+        const from = document.getElementById('my_from');
+
+        const name = from.name;
+        const email = from.email;
+        const pas = from.pas;
+
+        const btn = from.btn;
+
+        btn.addEventListener("click", function(e){
+            e.preventDefault();
+            class Accaunt{
+                constructor(arr){
+                this.name = name.value;
+                this.email = email.value;
+                this.pas = pas.value;
+                }
+
+                hello(){
+                    console.log('hello');
+                    
+                }
+            }
+
+            const acc = new Accaunt([name.value, email.value, pas.value])
+
+            console.log(acc);
+
+            
+            
+        })
+
+        
+
+
+        
+    </script>
+</body>
+</html>

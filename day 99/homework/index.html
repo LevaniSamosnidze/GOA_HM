@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+
+    <script>
+        class Car {
+        constructor(make, model) {
+            this.make = make;
+            this.model = model;
+        }
+        }
+
+        class BankAccount {
+        #balance;
+
+        constructor(initialBalance) {
+            this.#balance = initialBalance;
+        }
+
+        deposit(amount) {
+            this.#balance += amount;
+        }
+
+        withdraw(amount) {
+            if (amount <= this.#balance) {
+            this.#balance -= amount;
+            } else {
+            console.log('Insufficient funds');
+            }
+        }
+
+        getBalance() {
+            return this.#balance;
+        }
+        }
+
+        class MathOperations {
+        static PI = 3.14159;
+
+        static add(a, b) {
+            return a + b;
+        }
+        }
+
+        class Rectangle {
+        constructor(width, height) {
+            this.width = width;
+            this.height = height;
+        }
+
+        get area() {
+            return this.width * this.height;
+        }
+
+        set width(value) {
+            if (value > 0) {
+            this._width = value;
+            } else {
+            console.log("Width must be positive");
+            }
+        }
+
+        get width() {
+            return this._width;
+        }
+
+        set height(value) {
+            if (value > 0) {
+            this._height = value;
+            } else {
+            console.log("Height must be positive");
+            }
+        }
+
+        get height() {
+            return this._height;
+        }
+        }
+
+        class User {
+        #validatePassword(password) {
+            return password.length >= 8;
+        }
+
+        setPassword(password) {
+            if (this.#validatePassword(password)) {
+            this.password = password;
+            console.log("Password set successfully");
+            } else {
+            console.log("Password is too weak");
+            }
+        }
+        }
+
+        class Book {
+        #pages;
+
+        constructor(title, pages) {
+            this.title = title;
+            this.#pages = pages;
+        }
+
+        get pages() {
+            return this.#pages;
+        }
+
+        set pages(value) {
+            if (value > 0) {
+            this.#pages = value;
+            } else {
+            console.log("Pages must be positive");
+            }
+        }
+        }
+
+        class Player {
+        static playerCount = 0;
+
+        constructor(name) {
+            this.name = name;
+            Player.playerCount++;
+        }
+
+        static getPlayerCount() {
+            return Player.playerCount;
+        }
+        }
+
+        class Vehicle {
+        #speed;
+
+        constructor(speed) {
+            this.#speed = speed;
+        }
+
+        getSpeed() {
+            return this.#speed;
+        }
+
+        setSpeed(speed) {
+            if (speed >= 0) {
+            this.#speed = speed;
+            } else {
+            console.log("Speed must be positive");
+            }
+        }
+        }
+
+        class Bike extends Vehicle {
+        constructor(speed) {
+            super(speed);
+        }
+        }
+
+        class Student {
+        constructor(name, grade) {
+            this.name = name;
+            this.grade = grade;
+        }
+
+        static compareGrades(student1, student2) {
+            if (student1.grade > student2.grade) {
+            return `${student1.name} has a higher grade`;
+            } else if (student1.grade < student2.grade) {
+            return `${student2.name} has a higher grade`;
+            } else {
+            return "Both students have the same grade";
+            }
+        }
+        }
+
+        const myCar = new Car('Toyota', 'Corolla');
+        const account = new BankAccount(1000);
+        account.deposit(500);
+
+        console.log(account.getBalance());
+
+        console.log(MathOperations.add(5, 7));
+
+        const rect = new Rectangle(5, 8);
+        console.log(rect.area);
+
+        const user = new User();
+        user.setPassword("strongPass");
+
+        const book
+
+    </script>
+</body>
+</html>

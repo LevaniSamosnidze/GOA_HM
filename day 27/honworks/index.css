@@ -1,0 +1,42 @@
+body{
+    background-color: rgb(56, 54, 54);
+}
+#h{
+    text-align: center;
+}
+
+#p{
+    background-color: rgb(94, 80, 80);
+    border-radius: 25px;
+    color: black;
+    width: 900px;
+    text-align: center;
+    display:block;
+    margin: auto;
+    
+}
+#a{
+    text-align: center;
+    border: 0px solid;
+    color: rgb(0, 0, 0);
+    width: 60px;
+    height: 30px;
+    margin-left: auto;
+    
+}
+#l{
+    display: block;
+    margin: auto;
+}
+#mm{
+    border-radius: 25px;
+    background-color: rgb(48, 47, 47);
+}
+#zz{
+    background-color: rgb(48, 47, 47) ;
+    border-radius: 25px;
+}
+#qq{
+    border-radius: 25px;
+    background-color:rgb(48, 47, 47) ;
+}

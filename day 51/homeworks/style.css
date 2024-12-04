@@ -1,0 +1,60 @@
+body{
+    background-image: url(https://tse2.mm.bing.net/th?id=OIP.akz0hTxRH7ofWzOzjjH3zQHaDn&pid=Api&P=0&h=220);
+}
+#div{
+    border: 1px solid;
+    width: 25%;
+    height: 400px;
+    background-color: aliceblue;
+    margin: auto;
+    border-radius: 30px;
+    border: none;
+    text-align: center;
+}
+#name{
+    width: 90%;
+    background-color: antiquewhite;
+    height: 30px;
+    font-size: large;
+    border-radius: 10px;
+    border: none;
+
+
+}
+#gmail{
+    width: 90%;
+    background-color: antiquewhite;
+    height: 30px;
+    font-size: large;
+    border-radius: 10px;
+    border: none;
+
+
+}
+#pas{
+    width: 90%;
+    background-color: antiquewhite;
+    height: 30px;
+    font-size: large;
+    border-radius: 10px;
+    border: none;
+
+
+}
+button{
+    width: 90%;
+    height: 25px;
+    font-size: large;
+    background-color: rgba(56, 56, 245, 0.904);
+    color: aliceblue;
+    border: none;
+
+
+}
+button:hover{
+    background-color: rgb(59, 59, 227);
+    transition: 200ms;
+}
+button:active{
+    background-color: rgba(0, 0, 255, 0.641);
+}

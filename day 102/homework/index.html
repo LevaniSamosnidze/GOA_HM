@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Number Statistics</title>
+</head>
+<body>
+    <h2>Enter Numbers (comma-separated)</h2>
+    <input type="text" id="numbersInput" placeholder="e.g., 10, 20, 30, 40">
+    <button onclick="calculateStatistics()">Calculate Statistics</button>
+
+    <div id="result"></div>
+
+    <script>
+        function calculateStatistics() {
+            const input = document.getElementById("numbersInput").value;
+            const numbers = input.split(',').map(Number).filter(num => !isNaN(num));
+
+            if (numbers.length === 0) {
+                document.getElementById("result").innerText = "Please enter valid numbers.";
+                return;
+            }
+
+            const sum = numbers.reduce((acc, num) => acc + num, 0);
+            const average = sum / numbers.length;
+            const min = Math.min(...numbers);
+            const max = Math.max(...numbers);
+
+            document.getElementById("result").innerHTML = `
+                <p>Sum: ${sum}</p>
+                <p>Average: ${average.toFixed(2)}</p>
+                <p>Min: ${min}</p>
+                <p>Max: ${max}</p>
+            `;
+        }
+    </script>
+</body>
+</html>

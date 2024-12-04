@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <table id="table">
+        <td id="td">
+            
+        </td>
+    </table>
+
+
+    <button id="btn">append</button>
+
+
+
+    <script>
+        const td = document.getElementById('td');
+        const btn = document.getElementById('btn');
+
+        btn.addEventListener("click", ()=>{
+            const l = document.createElement("td");
+            let p = prompt('enter text')
+            l.textContent = p;
+
+            td.append(l)
+            
+        })
+        
+    </script>
+</body>
+</html>

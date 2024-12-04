@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Map Method Example</title>
+</head>
+<body>
+    <!-- Root ელემენტები -->
+    <div id="photos"></div>
+    <div id="names"></div>
+
+    <script type="text/javascript">
+        // 1) ფოტოების მასივიდან img თეგების გენერირება
+        const photoUrls = [
+            "https://via.placeholder.com/150",
+            "https://via.placeholder.com/200",
+            "https://via.placeholder.com/250",
+            "https://via.placeholder.com/300",
+            "https://via.placeholder.com/350"
+        ];
+
+        const photosContainer = document.getElementById('photos');
+        const photoElements = photoUrls.map(url => {
+            const img = document.createElement('img');
+            img.src = url;
+            img.alt = "Photo";
+            return img;
+        });
+
+        photoElements.forEach(img => photosContainer.appendChild(img));
+
+        // 2) სახელების მასივიდან ul და li თეგების გენერირება
+        const names = ["Alice", "Bob", "Charlie", "David", "Eve"];
+        const namesContainer = document.getElementById('names');
+        const ul = document.createElement('ul');
+
+        const nameElements = names.map((name, index) => {
+            const li = document.createElement('li');
+            li.textContent = name;
+            li.setAttribute('key', index); // Key attribute React-ისთვის მნიშვნელოვანია, მაგრამ აქ დემონსტრაციაა.
+            return li;
+        });
+
+        nameElements.forEach(li => ul.appendChild(li));
+        namesContainer.appendChild(ul);
+    </script>
+</body>
+</html>

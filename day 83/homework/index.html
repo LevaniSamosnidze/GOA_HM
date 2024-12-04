@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="ka">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form and Functions</title>
+</head>
+<body>
+    <form id="registrationForm">
+        <input type="text" id="name" placeholder="name" required>
+        <input type="email" id="email" placeholder="email" required>
+        <input type="password" id="password" placeholder="password" required>
+        <button type="submit">submit</button>
+    </form>
+
+    <script>
+        function generateRangeArray(start, end) {
+            const rangeArray = [];
+            for (let i = start; i <= end; i++) {
+                rangeArray.push(i);
+            }
+            return rangeArray;
+        }
+
+        function calculateAverage(numbers) {
+            const sum = numbers.reduce((acc, curr) => acc + curr, 0);
+            return sum / numbers.length;
+        }
+
+        const dataBase = [];
+
+        document.getElementById("registrationForm").addEventListener("submit", function(event) {
+            event.preventDefault();
+
+            const name = document.getElementById("name").value;
+            const email = document.getElementById("email").value;
+            const password = document.getElementById("password").value;
+
+            for (let i = 0; i < dataBase.length; i++) {
+                if (dataBase[i].email === email) {
+                    alert("ექაუნთი არსებობს");
+                    return;
+                }
+            }
+
+            dataBase.push({ name, email, password });
+            alert("ექაუნთი წარმატებით შეიქმნა");
+        });
+        const numbersArray = generateRangeArray(1, 5);
+        console.log(numbersArray);
+        const average = calculateAverage(numbersArray);
+        console.log(average);
+    </script>
+</body>
+</html>

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        p{
+            display: inline;
+        }
+    </style>
+</head>
+<body>
+    <p>computer: <p id="comp_result">None</p><br></p>
+    <p>შედეგი: <p id="result">არაფერი</p><br></p>
+    <p>computer: <p id="user">0</p></p><br>
+    <p>me: <p id="comp">0</p></p>
+    
+    <div id="div">
+        <button class="btn" id="btn1">მაკრატელი</button>
+        <button class="btn" id="btn2">ფურცელი</button>
+        <button class="btn" id="btn3">ჭა</button>
+    </div>
+
+    <script>
+        // result
+        let result = document.getElementById('result');
+        let comp_result = document.getElementById('comp_result');
+        // score
+        let p1 = document.getElementById('user');
+        let p2 = document.getElementById('comp');
+        let user_count = 0;
+        let comp_count = 0; 
+        // div
+        const user = document.getElementById('div');
+
+        user.addEventListener("click", function(e){
+            const comp = ['მაკრატელი','ფურცელი','ჭა'];
+            let index = Math.round(Math.random() * comp.length);
+            while (index === 3){
+                let index1 = Math.round(Math.random() * comp.length);
+                index = index1;
+                console.log(3);
+                if (index != 3){
+                    break;
+                }
+            }
+            comp_shoos = comp[index];
+            comp_result.textContent = comp_shoos;
+            if (e.target.id == 'btn1' && comp_shoos == 'მაკრატელი' || e.target.id == 'btn2' && comp_shoos == 'ფურცელი' || e.target.id == 'btn3' && comp_shoos == 'ჭა'){
+                result.textContent = 'ფრე'
+            }else if(e.target.id == 'btn1' && comp_shoos == 'ჭა' || e.target.id == 'btn2' && comp_shoos == 'მაკრატელი' || e.target.id == 'btn3' && comp_shoos == 'ფურცელი'){
+                result.textContent = 'წააგე';
+                comp_count = comp_count + 1;
+                p1.textContent = comp_count;
+            }else{
+                result.textContent = 'მოიგე';
+                user_count = user_count + 1;
+                p2.textContent = user_count;
+            }
+        });
+        
+        
+        
+    </script>
+</body>
+</html>

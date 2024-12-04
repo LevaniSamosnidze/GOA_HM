@@ -1,0 +1,141 @@
+body{
+    background-image: url(/imgs/computer-programming.jpg);
+    overflow-y: hidden;
+    overflow-x: hidden;
+}
+#div{
+    border: 1px solid;
+    width: 350px;
+    height: 400px;
+    background-color:  rgb(253, 248, 248);
+    margin: auto;
+    text-align: center;
+    border-radius: 30px;
+    border: none;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    #user{
+        box-shadow: 1px 1px 10px;
+        width: 90%;
+        height: 40px;
+        border-radius: 10px;
+        border: none;
+        font-size: large;
+        transition: 300ms;
+    }
+    #user:hover{
+        border: 1px solid coral;
+        background-color: aliceblue;
+        box-shadow: 2px 2px 20px;
+        
+    }
+    #email{
+        box-shadow: 1px 1px 10px;
+        width: 90%;
+        height: 40px;
+        border-radius: 10px;
+        border: none;
+        font-size: large;
+        transition: 300ms;
+    }
+    #email:hover{
+    border: 1px solid coral;
+    background-color: aliceblue; 
+    box-shadow: 2px 2px 20px;
+    }
+    #pas{
+        box-shadow: 1px 1px 10px;
+        width: 90%;
+        height: 40px;
+        border-radius: 10px;
+        border: none;
+        font-size: large;
+
+    }
+    #pas:hover{
+        border: 1px solid coral;
+        background-color: aliceblue; 
+        box-shadow: 2px 2px 20px;
+    }
+    #but{
+        width: 85%;
+        height: 30px;
+        border: none;
+        background-color: rgba(40, 40, 244, 0.916);
+        color: aliceblue;
+    }
+    #but:hover{
+        background-color: rgba(78, 78, 248, 0.923);
+    }
+    #but:active{
+        background-color: rgba(21, 21, 239, 0.519);
+    }
+
+
+}
+
+#div1{
+    border: 1px solid;
+    width: 350px;
+    height: 400px;
+    background-color:  rgb(253, 248, 248);
+    margin: auto;
+    text-align: center;
+    border-radius: 30px;
+    border: none;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    #user1{
+        box-shadow: 1px 1px 10px;
+        width: 90%;
+        height: 40px;
+        border-radius: 10px;
+        border: none;
+        font-size: large;
+        transition: 300ms;
+    }
+    #user1:hover{
+        border: 1px solid coral;
+        background-color: aliceblue;
+        box-shadow: 2px 2px 20px;
+    }
+    #email1{
+        box-shadow: 1px 1px 10px;
+        width: 90%;
+        height: 40px;
+        border-radius: 10px;
+        border: none;
+        font-size: large;
+        transition: 300ms;
+    }
+    #email1:hover{
+    border: 1px solid coral;
+    background-color: aliceblue; 
+    box-shadow: 2px 2px 20px;
+    }
+    #pas1{
+        box-shadow: 1px 1px 10px;
+        width: 90%;
+        height: 40px;
+        border-radius: 10px;
+        border: none;
+        font-size: large;
+
+    }
+    #pas1:hover{
+        border: 1px solid coral;
+        background-color: aliceblue; 
+        box-shadow: 2px 2px 20px;
+    }
+    #but1{
+        width: 85%;
+        height: 30px;
+        border: none;
+        background-color: rgba(40, 40, 244, 0.916);
+        color: aliceblue;
+    }
+    #but1:hover{
+        background-color: rgba(78, 78, 248, 0.923);
+    }
+    #but1:active{
+        background-color: rgba(21, 21, 239, 0.519);
+    }
+}

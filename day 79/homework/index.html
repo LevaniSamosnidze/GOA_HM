@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form>
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password">
+        <span id="password-warning"></span>
+      </form>
+      
+      <script>
+        const passwordInput = document.querySelector("#password");
+        const warningMessage = document.querySelector("#password-warning");
+      
+        passwordInput.addEventListener("input", () => {
+          if (passwordInput.value.length < 8) {
+            warningMessage.textContent = "Password must be at least 8 characters long.";
+            warningMessage.style.color = "red";
+          } else {
+            warningMessage.textContent = "";
+          }
+        });
+      </script>
+      
+
+
+</body>
+</html>

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #crypto-tracker {
+        text-align: center;
+        max-width: 400px;
+        margin: auto;
+        font-family: Arial, sans-serif;
+        }
+        #crypto-input, #fetch-button {
+        padding: 10px;
+        margin: 5px;
+        }
+        #crypto-results {
+        margin-top: 20px;
+        }
+
+    </style>
+</head>
+<body>
+    <div id="crypto-tracker">
+        <input type="text" id="crypto-input" placeholder="Enter cryptocurrency name" />
+        <button id="fetch-button">Fetch Price</button>
+        <div id="crypto-results"></div>
+    </div>
+
+    <script>
+        const fetchCryptoData = async (crypto) => {
+        try {
+            const response = await fetch(`https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd&ids=${crypto}`);
+            if (!response.ok) throw new Error("Cryptocurrency not found");
+            
+            const data = await response.json();
+            renderCryptoData(data[0]);
+        } catch (error) {
+            console.error("Error fetching crypto data:", error);
+            document.getElementById("crypto-results").innerText = "Error: Cryptocurrency not found";
+        }
+        };
+
+
+    </script>
+</body>
+</html>

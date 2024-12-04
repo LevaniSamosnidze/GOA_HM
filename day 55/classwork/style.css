@@ -1,0 +1,23 @@
+#div{
+    border: 1px solid;
+    width: 200px;
+    height: 200px;
+    margin: auto;
+    background-image: url(https://tourguide.ge/wp-content/uploads/2019/07/tbilisi-at-night.jpg?v=1621426290);
+    background-size:cover;
+    border-radius: 25px;
+    box-shadow:5px 10px 20px;
+    border: none;
+    #div1{
+        border: 1px solid;
+        width: 200px;
+        height: 200px;
+        border-radius: 25px;
+        border: none;
+        background-color: rgba(240, 248, 255, 0.271);
+        padding-top: 50px;
+        box-sizing: border-box;
+        text-align: center;
+
+    }
+}

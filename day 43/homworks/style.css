@@ -1,0 +1,72 @@
+body{
+    background-color: rgb(255, 255, 255);
+}
+#div{
+    border: 1px solid;
+    width: 360px;
+    height: 400px;
+    background-color: rgb(229, 228, 228);
+    margin: auto;
+    text-align: center;
+    border: none;
+    border-radius: 40px;
+}
+h1{
+    text-align: center;
+}
+#name{
+    width: 85%;
+    border: none;
+    background-color: antiquewhite;
+    height: 30px;
+    font-size: 20px;
+    border-radius: 25px;
+}
+#name:hover{
+    border: 3px solid cadetblue;
+}
+#email{
+    width: 85%;
+    border: none;
+    background-color: antiquewhite;
+    height: 30px;
+    font-size: 20px;
+    border-radius: 25px;
+}
+#email:hover{
+    border: 3px solid cadetblue;
+}
+#password{
+    width: 85%;
+    border: none;
+    background-color: antiquewhite;
+    height: 30px;
+    font-size: 20px;
+    border-radius: 25px;
+}
+#password:hover{
+    border: 3px solid cadetblue;
+}
+#re-password{
+    width: 85%;
+    border: none;
+    background-color: antiquewhite;
+    height: 30px;
+    font-size: 20px;
+    border-radius: 25px;
+}
+#re-password:hover{
+    border: 3px solid cadetblue;
+}
+#button{
+    background-color: rgb(40, 40, 233);
+    font-size: 25px;
+    width: 85%;
+}
+
+#button:hover{
+    background-color: rgb(65, 65, 246);
+}
+#button:active{
+    background-color: rgb(10, 10, 229);
+}

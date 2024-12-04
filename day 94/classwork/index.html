@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <div id="div">
+
+        <p id="p1">levani</p>
+        <p id="p2">hello</p>
+
+    </div>
+
+
+    <button id="btn">remove</button>
+
+    <script>
+        const p1 = document.getElementById('p');
+        const btn = document.getElementById('btn');
+        const p2 = document.getElementById('p2');
+        const div = document.getElementById('div');
+
+        div.addEventListener("click", (e) => {
+
+            e.target.remove();
+        })
+
+        let list = [1,2,3]
+        list.forEach((_, index, arr) => {
+            console.log(String(l) + '-' + String(index));
+            
+            
+        });
+
+        const l = list.filter
+        // list.map(function(value, index, arr) {
+        //     console.log(arr)
+        // })
+        
+
+    </script>
+</body>
+</html>

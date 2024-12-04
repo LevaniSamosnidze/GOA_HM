@@ -1,0 +1,27 @@
+#div{
+    border: 1px solid;
+    height: 30px;
+    transform: scale(2);
+    width: 500px;
+    border-radius: 10px;
+    margin: auto;
+    margin-top: 300px;
+}
+#div1{
+    border: 1px solid;
+    height: 30px;
+    border-radius: 10px;
+    width: 1px;
+    animation: name 3s ease-out 2 ;
+}
+
+@keyframes name{
+    from{
+        background-color: black;
+    }
+    to{
+        background-color: red;
+        width: 500px;
+    }
+    
+}

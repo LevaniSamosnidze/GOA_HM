@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+
+
+
+    <script>
+
+        // შექმენით რიცხვების მასივი სადაც გექნებათ 10 რიცხვი, თქვენი 
+        // დავალებაა გაფილტროთ ეს მასივი და დააბრუნოთ ახალი მასივი 
+        // სადაც მოთავსებული იქნება ისეთი რიცხვები რომელიც ორიგინალ მასივიში
+        //  მეორდება ზუსტად 2ჯერ, შექმენით filter მეთოდის 
+        // კლონი და გააკეთეთ იგივე რამე (აუცილებლად ახსენით დეტალურად თვენი კლონის მუშაობა)
+  
+        let list = [20, 43, 28, 69, 40, 21];
+
+        const l = list1.filter(function(value){
+            const result = [];
+            if (value in list){
+                result.push(value)
+            }
+            return result
+        })
+
+        function my_filter(arr){
+            const res = [];
+            for (let i = 0; i < arr.length; i++){
+                if (arr[i] in list){
+                    res.push(arr[i])
+                }
+            }
+        }
+
+        my_filter(list)
+        
+    </script>
+</body>
+</html>

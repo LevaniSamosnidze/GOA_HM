@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form>
+        <label for="color">Choose a color:</label>
+        <select id="color" name="color">
+          <option value="">Select a color</option>
+          <option value="Red">Red</option>
+          <option value="Blue">Blue</option>
+          <option value="Green">Green</option>
+        </select>
+      </form>
+      <div id="selectedColor"></div>
+      
+      <script>
+        const colorSelect = document.querySelector("#color");
+        const selectedColorDiv = document.querySelector("#selectedColor");
+      
+        colorSelect.addEventListener("change", () => {
+          selectedColorDiv.textContent = `You selected: ${colorSelect.value}`;
+        });
+      </script>
+      
+</body>
+</html>
